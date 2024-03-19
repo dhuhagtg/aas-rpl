@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\BPDController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\PemerintahDesaController;
+use App\Http\Controllers\PengaduanMasyarakatController;
+use App\Http\Controllers\PengajuanSuratController;
+use App\Http\Controllers\ProdukHukumController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +25,14 @@ use Inertia\Inertia;
 */
 
 
-Route::get('/', [BeritaController::class, 'index']);
+Route::get('/', [BerandaController::class, 'index'])->name('/');
+Route::get('berita', [BeritaController::class, 'index'])->name('berita');
+Route::get('galeri', [GaleriController::class, 'index'])->name('galeri');
+Route::get('pemerintahdesa', [PemerintahDesaController::class, 'index'])->name('pemerintahdesa');
+Route::get('bpd', [BPDController::class, 'index'])->name('bpd');
+Route::get('pengaduanmasyarakat', [PengaduanMasyarakatController::class, 'index'])->name('pengaduanmasyarakat');
+Route::get('pengajuansurat', [PengajuanSuratController::class, 'index'])->name('pengajuansurat');
+Route::get('produkhukum', [ProdukHukumController::class, 'index'])->name('produkhukum');
 
 Route::get('/welcome', function () {
     return Inertia::render('Welcome', [

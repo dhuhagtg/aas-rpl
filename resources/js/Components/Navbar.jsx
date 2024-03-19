@@ -1,4 +1,5 @@
 import { Link } from "@inertiajs/react"
+import "../Components/css/navbar.css"
 
 Link
 
@@ -15,13 +16,13 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><Link href="">Beranda</Link></li>
+          <li><a href={route('/')}>Beranda</a></li>
           <li>
             <details>
               <summary>Pemerintahan</summary>
               <ul className="p-2">
-                <li><a>Pemerintah Desa</a></li>
-                <li><a>BPD</a></li>
+                <li><a href={route('pemerintahdesa')}>Pemerintah Desa</a></li>
+                <li><a href={route('bpd')}>BPD</a ></li>
               </ul>
             </details>
           </li>
@@ -29,14 +30,14 @@ const Navbar = () => {
             <details>
               <summary>Layanan</summary>
               <ul className="p-2">
-                <li><a>Pengajuan Surat</a></li>
-                <li><a>Pengaduan Masyarakat</a></li>
+                <li><a href={route('pengajuansurat')}>Pengajuan Surat</a></li>
+                <li><a href={route('pengaduanmasyarakat')}>Pengaduan Masyarakat</a></li>
               </ul>
             </details>
           </li>
-          <li><a>Produk Hukum</a></li>
-          <li><a>Berita</a></li>
-          <li><a>Galeri</a></li>
+          <li><a href={route('produkhukum')}>Produk Hukum</a></li>
+          <li><a href={route('berita')}>Berita</a></li>
+          <li><a href={route('galeri')}>Galeri</a></li>
         </ul>
       </div>
       <div className="navbar-end">
