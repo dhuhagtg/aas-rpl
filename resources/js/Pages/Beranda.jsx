@@ -1,24 +1,24 @@
-import CardButton from '@/Components/Beranda/CardButton';
-import HeroBeranda from '@/Components/Beranda/HeroBeranda';
-import Footer from '@/Components/Footer';
-import Navbar from '@/Components/Navbar';
-import { Link, Head } from '@inertiajs/react';
+import Navbar from "@/Components/Common/navbar/Navbar"
+import "../Components/Beranda/Beranda.css"
+import Footer from "@/Components/Common/footer/Footer"
+import CarouselBeranda from "@/Components/Beranda/CarouselBeranda"
+import MenuCard from "@/Components/Beranda/MenuCard"
+import Sambutan from "@/Components/Beranda/Sambutan"
 
 
 
 
-
-export default function Beranda(props) {
-  console.log(props)
+function Beranda() {
   return (
-
-    <div className='min-h-screen bg-slate-50'>
-      <Head title={props.title} />
+    <>
       <Navbar />
-      <HeroBeranda />
-      <CardButton />
-      <Footer />
-    </div>
+      <CarouselBeranda />
+      <Sambutan />
 
+      <Footer />
+
+    </>
   )
 }
+
+export default Beranda

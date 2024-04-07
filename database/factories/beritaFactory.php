@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +19,11 @@ class beritaFactory extends Factory
     {
         return [
             'judul' => $this->faker->sentence,
-            'gambar' => $this->faker->image,
+            'slug' => $this->faker->sentence,
             'deskripsi' => $this->faker->paragraph(2, true),
-            'author' => $this->faker->name(),
+            'user_id' => User::factory()->create()->id, // Gunakan factory User untuk membuat pengguna baru dan gunakan ID-nya
+            'gambar' => $this->faker->image('public/storage/berita', 400, 300, null, false), // Simpan gambar di folder public/storage/berita
+
         ];
     }
 }

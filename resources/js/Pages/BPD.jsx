@@ -1,16 +1,16 @@
-import Navbar from '@/Components/Navbar';
-import { Link, Head } from '@inertiajs/react';
+import CarouselBPD from "@/Components/BPD/CarouselBPD"
+import DaftarBPD from "@/Components/BPD/DaftarBPD"
+import Navbar from "@/Components/Common/navbar/Navbar"
 
 
 
-export default function Berita(props) {
+function BPD() {
   return (
-
-    <div className='min-h-screen bg-slate-50'>
-      <Head title={props.title} />
+    <>
       <Navbar />
-      <h1>INI HALAMAN BPD</h1>
-    </div>
-
+      <CarouselBPD />
+      <DaftarBPD />
+    </>
   )
 }
+export default BPD

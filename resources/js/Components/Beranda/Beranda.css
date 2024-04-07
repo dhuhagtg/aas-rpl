@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+
+/*-----------------------------------------HERO IMAGE----------------------------------------------*/
+.container-carousel {
+  margin-bottom: 50px;
+}
+
+.carousel {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* Lebar penuh */
+  height: 90vh;
+  /* Tinggi sesuai tinggi viewport */
+}
+
+.carousel-item img {
+  width: 100%;
+  /* Lebar penuh */
+  height: 100%;
+  /* Tinggi penuh */
+  object-fit: cover;
+  /* Menyesuaikan gambar ke dalam ukuran kontainer */
+}
+
+/*------------------------------------------------ SAMBUTAN--------------------------------------------- */
+.sambutan {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.image {
+  width: 200%;
+}
+
+.description {
+  margin-left: 2rem;
+}

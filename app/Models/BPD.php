@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class BPD extends Model
 {
     use HasFactory;
+    protected $table = 'bpd';
+    protected $fillable = ['nama', 'jabatan'];
+
+    protected $hidden = [];
 }

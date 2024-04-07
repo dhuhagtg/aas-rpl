@@ -1,16 +1,14 @@
-import Navbar from '@/Components/Navbar';
-import { Link, Head } from '@inertiajs/react';
+import Navbar from "@/Components/Common/navbar/Navbar"
+import DaftarPemerintahDesa from "@/Components/PemerintahDesa/DaftarPemerintahdesa"
+import CarouselPemerintahDesa from "@/Components/PemerintahDesa/CarouselPemerintahDesa"
 
-
-
-export default function Berita(props) {
+function PemerintahDesa() {
   return (
-
-    <div className='min-h-screen bg-slate-50'>
-      <Head title={props.title} />
+    <>
       <Navbar />
-      <h1>INI PEMERINTAH DESA</h1>
-    </div>
-
+      <CarouselPemerintahDesa />
+      <DaftarPemerintahDesa />
+    </>
   )
 }
+export default PemerintahDesa

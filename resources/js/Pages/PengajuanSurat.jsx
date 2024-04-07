@@ -1,16 +1,19 @@
-import Navbar from '@/Components/Navbar';
-import { Link, Head } from '@inertiajs/react';
+import Navbar from "@/Components/Common/navbar/Navbar"
+import CarouselPengajuanSurat from "@/Components/PengajuanSurat/CarouselPengajuanSurat"
+import TutorialPengajuanSurat from "@/Components/PengajuanSurat/TutorialpengajuanSurat"
 
 
 
-export default function Berita(props) {
+
+function PengajuanSurat() {
   return (
-
-    <div className='min-h-screen bg-slate-50'>
-      <Head title={props.title} />
+    <>
       <Navbar />
-      <h1>INI HALAMAN PENGAJUAN SURAT</h1>
-    </div>
+      <CarouselPengajuanSurat />
+      <TutorialPengajuanSurat />
+
+    </>
 
   )
 }
+export default PengajuanSurat

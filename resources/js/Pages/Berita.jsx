@@ -1,6 +1,6 @@
 import DaftarBerita from '@/Components/Berita/DaftarBerita';
 import Paginator from '@/Components/Berita/Paginator';
-import Navbar from '@/Components/Navbar';
+import Navbar from '@/Components/Common/Navbar/Navbar';
 import { Link, Head } from '@inertiajs/react';
 
 

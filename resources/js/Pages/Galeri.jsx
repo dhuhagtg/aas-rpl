@@ -1,4 +1,4 @@
-import Navbar from '@/Components/Navbar';
+import Navbar from '@/Components/Common/Navbar/Navbar';
 import { Link, Head } from '@inertiajs/react';
 
 
