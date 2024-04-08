@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('img/icon.png') }}" rel="shortcut" type="image/png">
+    <link href="{{ asset('img/logo-banyumas.png') }}" rel="icon" type="image/png">
 
     <title>{{ $title }}</title>
 

@@ -43,4 +43,12 @@
     </table>
 
 
+    <!-- Tombol navigasi pagination -->
+    {{-- <div class="flex justify-center">
+        {{ $users->links() }}
+    </div>
+    <div class="text-sm text-gray-500 text-center">
+        <p>Page {{ $users->currentPage() }} of {{ $users->lastPage() }}</p>
+        <p>Total {{ $users->total() }} data</p>
+    </div> --}}
 @endsection

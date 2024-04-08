@@ -5,3 +5,12 @@
 .z-index-0 {
   z-index: 0;
 }
+
+.logo {
+  width: 50px;
+  /* Atur lebar sesuai kebutuhan */
+  height: auto;
+  /* Untuk menjaga aspek rasio */
+  margin-right: 0px;
+  /* Atur margin agar terpisah dari elemen lain */
+}

@@ -79,14 +79,14 @@
                 <li>
                     <a href="/berita" class="transform hover:translate-x-2 transition-transform ease-in duration-200">
                         <span class="inline-flex items-center justify-center h-12 w-12 text-lg"><i
-                                class="bx bx-comment-dots {{ Request::is('berita*') ? 'text-danger' : '' }}"></i></span>
+                                class="bx bx-news {{ Request::is('berita*') ? 'text-danger' : '' }}"></i></span>
                         <span class="text-sm font-medium">Berita</span>
                     </a>
                 </li>
                 <li>
                     <a href="/galeri" class="transform hover:translate-x-2 transition-transform ease-in duration-200">
                         <span class="inline-flex items-center justify-center h-12 w-12 text-lg"><i
-                                class="bx bx-comment-dots {{ Request::is('galeri*') ? 'text-danger' : '' }}"></i></span>
+                                class="bx bx-photo-album {{ Request::is('galeri*') ? 'text-danger' : '' }}"></i></span>
                         <span class="text-sm font-medium">Galeri</span>
                     </a>
                 </li>
@@ -95,14 +95,14 @@
                     <a href="/pemerintah_desa"
                         class="transform hover:translate-x-2 transition-transform ease-in duration-200">
                         <span class="inline-flex items-center justify-center h-12 w-12 text-lg"><i
-                                class="bx bx-comment-dots {{ Request::is('pemerintah_desa*') ? 'text-danger' : '' }}"></i></span>
+                                class="bx bx-buildings {{ Request::is('pemerintah_desa*') ? 'text-danger' : '' }}"></i></span>
                         <span class="text-sm font-medium">Pemerintah Desa</span>
                     </a>
                 </li>
                 <li>
                     <a href="/bpd" class="transform hover:translate-x-2 transition-transform ease-in duration-200">
                         <span class="inline-flex items-center justify-center h-12 w-12 text-lg"><i
-                                class="bx bx-comment-dots {{ Request::is('bpd*') ? 'text-danger' : '' }}"></i></span>
+                                class="bx bx-detail {{ Request::is('bpd*') ? 'text-danger' : '' }}"></i></span>
                         <span class="text-sm font-medium">BPD</span>
                     </a>
                 </li>
