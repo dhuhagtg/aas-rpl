@@ -1,7 +1,9 @@
+import Footer from "@/Components/Common/footer/Footer";
 import Navbar from "@/Components/Common/navbar/Navbar"
 import CarouselSejarah from "@/Components/Sejarah/CarouselSejarah"
 import SejarahDesa from "@/Components/Sejarah/SejarahDesa"
 import { Helmet } from "react-helmet";
+
 
 
 function Sejarah() {
@@ -13,6 +15,7 @@ function Sejarah() {
       <Navbar />
       <CarouselSejarah />
       <SejarahDesa />
+      <Footer />
 
     </>
 
