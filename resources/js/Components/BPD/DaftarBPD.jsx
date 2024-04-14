@@ -1,16 +1,52 @@
+import { useState, useEffect } from 'react';
+import './BPD.css'
+useEffect
+
+
 const DaftarBPD = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let result = await fetch("http://127.0.0.1:8000/api/daftar-bpd-desa");
+        result = await result.json();
+        setData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
   return (
     <>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
+
+
+      <table className="table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Jabatan</th>
+
+          </tr>
+        </thead>
+        {data.map((item, id) => (
+          <tbody>
+            <tr className="hover">
+              <th>{id + 1}</th>
+              <td>{item.nama}</td>
+              <td>{item.jabatan}</td>
+            </tr>
+          </tbody>
+        ))}
+      </table>
+
+
     </>
   )
 }

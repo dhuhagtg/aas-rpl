@@ -1,3 +1,4 @@
+import Footer from "@/Components/Common/footer/Footer";
 import Navbar from "@/Components/Common/navbar/Navbar"
 import CarouselPengajuanSurat from "@/Components/PengajuanSurat/CarouselPengajuanSurat"
 import TutorialPengajuanSurat from "@/Components/PengajuanSurat/TutorialpengajuanSurat"
@@ -14,6 +15,7 @@ function PengajuanSurat() {
       <Navbar />
       <CarouselPengajuanSurat />
       <TutorialPengajuanSurat />
+      <Footer />
 
     </>
 

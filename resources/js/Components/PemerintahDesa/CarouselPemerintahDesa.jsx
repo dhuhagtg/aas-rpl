@@ -1,3 +1,5 @@
+import './PemerintahDesa.css'
+
 const CarouselPemerintahDesa = () => {
   return (
     <>
@@ -8,12 +10,9 @@ const CarouselPemerintahDesa = () => {
             <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <div>
-                <h1 className="text-4xl font-bold">SELAMAT DATANG DI WEBSITE RESMI DESA MARGASANA</h1>
-
-                <p>Desa Margasana merupakan desa yang berada di Kecamatan Jatilawang,</p>
-                <p> Kabupaten Banyumas. Informasi selengkapnya mengenai Desa Margasana klik selengkapnya</p>
-                <br></br><br></br>
-                <button className="btn btn-primary">selengkapnya</button>
+                <h1 className="text-4xl font-bold" style={{ marginLeft: 200 }}>PEMERINTAH DESA</h1>
+                <h1 className="text-4xl font-bold" style={{ marginLeft: 200 }}>DESA MARGASANA</h1>
+                <hr className="blue-line-pemerintah-desa" style={{ marginLeft: 200 }} />
               </div>
             </div>
           </div>

@@ -1,26 +1,19 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\BerandaController;
-use App\Http\Controllers\PengajuanSuratFeController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\BPDController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\PemerintahDesaController;
 use App\Http\Controllers\PengaduanController;
-use App\Http\Controllers\PengaduanMasyarakatController;
 use App\Http\Controllers\PengajuanSuratController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\TanggapanController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\visimisiController;
-use App\Http\Controllers\WilayahController;
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+
 
 
 
@@ -37,19 +30,11 @@ use Inertia\Inertia;
 */
 
 
-Route::get('/', [BerandaController::class, 'index'])->name('/');
-Route::get('galeri', [GaleriController::class, 'index'])->name('galeri');
-Route::get('pemerintahdesa', [PemerintahDesaController::class, 'index'])->name('pemerintahdesa');
-Route::get('bpd', [BPDController::class, 'index'])->name('bpd');
-Route::get('pengaduanmasyarakat', [PengaduanMasyarakatController::class, 'index'])->name('pengaduanmasyarakat');
-Route::get('pengajuansuratfe', [PengajuanSuratFeController::class, 'index'])->name('pengajuansuratfe');
-Route::get('visimisi', [visimisiController::class, 'index'])->name('visimisi');
-Route::get('sejarah', [SejarahController::class, 'index'])->name('sejarah');
-Route::get('wilayah', [WilayahController::class, 'index'])->name('wilayah');
+
 
 
 require __DIR__ . '/auth.php';
-
+require __DIR__ . '/front/front.php';
 /*------------------------------------------BACKEND----------------------------------------------- */
 
 Route::get('/masuk', [AuthController::class, 'masuk'])->name('login')->middleware('guest');

@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
+
+use App\Http\Controllers\Controller;
 
 use App\Models\Beranda;
 use Illuminate\Http\Request;
@@ -11,13 +13,6 @@ class BerandaController extends Controller
 {
   public function index()
   {
-    return Inertia::render(
-      'Beranda',
-      [
-        'title' => "MARGASANA",
-
-
-      ]
-    );
+    return Inertia::render('Beranda');
   }
 }

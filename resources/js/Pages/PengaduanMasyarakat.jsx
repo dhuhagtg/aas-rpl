@@ -1,3 +1,4 @@
+import Footer from "@/Components/Common/footer/Footer";
 import Navbar from "@/Components/Common/navbar/Navbar"
 import CarouselPengaduanMasyarakat from "@/Components/PengaduanMasyarakat/CarouselPengaduanMasyarakat"
 import TutorialPengaduanMasyarakat from "@/Components/PengaduanMasyarakat/TutorialPengaduanMasyarakat"
@@ -15,6 +16,7 @@ function PengaduanMasyarakat() {
       <Navbar />
       <CarouselPengaduanMasyarakat />
       <TutorialPengaduanMasyarakat />
+      <Footer />
 
     </>
 

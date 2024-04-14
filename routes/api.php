@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\Front\BeritaController;
+use App\Http\Controllers\Front\BPDController;
+use App\Http\Controllers\Front\GaleriController;
+use App\Http\Controllers\Front\PemerintahDesaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/daftar-pemerintah-desa', [PemerintahDesaController::class, 'list']);
+Route::get('/daftar-bpd-desa', [BPDController::class, 'list']);
+Route::get('/daftar-galeri-desa', [GaleriController::class, 'list']);
+Route::get('/daftar-berita-desa', [BeritaController::class, 'list']);

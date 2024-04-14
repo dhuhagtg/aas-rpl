@@ -1,5 +1,6 @@
-import './PengaduanMasyarakat.css'
-const CarouselPengaduanMasyarakat = () => {
+import './Berita.css'
+
+const CarouselBerita = () => {
   return (
     <>
       <div className='container-carousel'>
@@ -9,9 +10,9 @@ const CarouselPengaduanMasyarakat = () => {
             <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <div>
-                <h1 className="text-4xl font-bold" style={{ marginLeft: 200 }}>PENGADUAN MASYARAKAT</h1>
+                <h1 className="text-4xl font-bold" style={{ marginLeft: 200 }}>BERITA DESA</h1>
                 <h1 className="text-4xl font-bold" style={{ marginLeft: 200 }}>DESA MARGASANA</h1>
-                <hr className="blue-line-pengaduan-masyarakat" style={{ marginLeft: 200 }} />
+                <hr className="blue-line-berita" style={{ marginLeft: 200 }} />
               </div>
             </div>
           </div>
@@ -20,4 +21,4 @@ const CarouselPengaduanMasyarakat = () => {
     </>
   )
 }
-export default CarouselPengaduanMasyarakat
+export default CarouselBerita

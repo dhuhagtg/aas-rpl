@@ -10,8 +10,8 @@ function Wilayah() {
         <title>Wilayah Desa - Desa Margasana</title>
       </Helmet>
       <Navbar />
-      {/* <CarouselWilayah />
-      <WilayahDesa /> */}
+      <CarouselWilayah />
+      <WilayahDesa />
     </>
   )
 }

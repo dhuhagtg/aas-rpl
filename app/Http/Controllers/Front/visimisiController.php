@@ -1,25 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Front;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class SejarahController extends Controller
+
+
+class visimisiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Inertia::render(
-            'Sejarah',
-            [
-                'title' => "MARGASANA",
-
-
-            ]
-        );
+        return Inertia::render('Visimisi');
     }
 
     /**
