@@ -43,11 +43,14 @@ const DaftarFoto = () => {
         ))}
       </div>
 
-      {/* Paginator */}
-      <div className="paginator">
-        <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
-        <button onClick={() => paginate(currentPage + 1)} disabled={indexOfLastItem >= data.length}>Next</button>
+      <div className="paginator" style={{ marginBottom: 30 }}>
+        <div className="join">
+          <button className="join-item btn" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>«</button>
+          <button className="join-item btn" >Page {currentPage}</button>
+          <button className="join-item btn" onClick={() => paginate(currentPage + 1)} disabled={indexOfLastItem >= data.length}>»</button>
+        </div>
       </div>
+
     </>
   )
 }

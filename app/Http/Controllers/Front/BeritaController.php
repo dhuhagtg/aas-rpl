@@ -16,6 +16,8 @@ class BeritaController extends Controller
     }
     public function list()
     {
-        return Berita::all();
+        $berita = Berita::orderBy('created_at', 'desc')->get();
+
+        return $berita;
     }
 }
