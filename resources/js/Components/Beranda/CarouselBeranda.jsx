@@ -10,17 +10,19 @@ const CarouselBeranda = () => {
             <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <div>
-                <h1 className="text-4xl font-bold">SELAMAT DATANG DI WEBSITE RESMI DESA MARGASANA</h1>
+                <h1 className="text-4xl font-bold judul-carousel">SELAMAT DATANG DI WEBSITE RESMI DESA MARGASANA</h1>
+                <p className="sub-judul-carousel"> Desa Margasana dalam bahasa jawa berarti " dalan asu" atau dalam bahasa Indonesia berarti "jalan anjing".
 
-                <p>Desa Margasana merupakan desa yang berada di Kecamatan Jatilawang,</p>
-                <p> Kabupaten Banyumas. Informasi selengkapnya mengenai Desa Margasana klik selengkapnya</p>
-                <br></br><br></br>
-                <button className="btn btn-primary">selengkapnya</button>
+                  <br></br> Awalnya desa Margasana dipimpin oleh selir Mataram yaitu Eyang Ayu didampingi Eyang Patrawisa dan Eyang Margati,
+                  <br></br>setelah wafat beliau dimakamkan di sebuah tempat yang biasa dinamakan Punden.
+                </p>
+                <br></br>
+                <button className="btn btn-primary baca-sejarah">Baca sejarah</button>
               </div>
             </div>
           </div>
         </div >
-      </div>
+      </div >
     </>
   )
 }

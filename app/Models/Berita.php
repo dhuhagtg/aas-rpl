@@ -10,12 +10,12 @@ class Berita extends Model
 {
     use HasFactory;
     protected $table = 'berita';
-    protected $fillable = ['judul', 'slug', 'gambar', 'deskripsi', 'user_id'];
+    protected $fillable = ['judul', 'slug', 'gambar', 'deskripsi', 'user_name'];
 
     protected $hidden = [];
 
     public function users()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'user_name', 'nama');
     }
 }

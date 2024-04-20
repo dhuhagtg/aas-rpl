@@ -4,6 +4,8 @@ import Footer from "@/Components/Common/footer/Footer"
 import CarouselBeranda from "@/Components/Beranda/CarouselBeranda"
 import { Helmet } from "react-helmet";
 import Sambutan from "@/Components/Beranda/Sambutan"
+import FiturDesa from "@/Components/Beranda/FiturDesa";
+import BeritaBeranda from "@/Components/Beranda/BeritaBeranda";
 
 
 
@@ -19,7 +21,8 @@ function Beranda() {
       <Navbar />
       <CarouselBeranda />
       <Sambutan />
-
+      <FiturDesa />
+      <BeritaBeranda />
       <Footer />
 
     </>

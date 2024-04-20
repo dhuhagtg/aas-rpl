@@ -27,3 +27,5 @@ Route::get('/daftar-pemerintah-desa', [PemerintahDesaController::class, 'list'])
 Route::get('/daftar-bpd-desa', [BPDController::class, 'list']);
 Route::get('/daftar-galeri-desa', [GaleriController::class, 'list']);
 Route::get('/daftar-berita-desa', [BeritaController::class, 'list']);
+Route::get('/berita-desa/{slug}', [BeritaController::class, 'detail']);
+Route::get('/galeri-desa/{slug}', [GaleriController::class, 'detail']);

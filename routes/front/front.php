@@ -4,6 +4,7 @@
 use App\Http\Controllers\Front\BeritaController;
 use App\Http\Controllers\Front\BerandaController;
 use App\Http\Controllers\Front\BPDController;
+use App\Http\Controllers\Front\DetailBeritaController;
 use App\Http\Controllers\Front\GaleriController;
 use App\Http\Controllers\Front\PemerintahDesaController;
 use App\Http\Controllers\Front\PengaduanMasyarakatController;
@@ -28,3 +29,5 @@ Route::get('visimisi', [visimisiController::class, 'index'])->name('visimisi');
 Route::get('sejarah', [SejarahController::class, 'index'])->name('sejarah');
 Route::get('wilayah', [WilayahController::class, 'index'])->name('wilayah');
 Route::get('berita-desa', [BeritaController::class, 'index'])->name('berita');
+Route::get('/berita-desa/{slug}', [BeritaController::class, 'detail']);
+Route::get('/galeri-desa/{slug}', [GaleriController::class, 'detail']);

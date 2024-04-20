@@ -13,15 +13,15 @@ class BeritaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $berita = Berita::all();
-        $berita = Berita::paginate(10);
+        $berita = Berita::orderBy('created_at', 'desc')->paginate(10);
         return view('berita.index', [
             'title' => 'Semua Berita',
             'berita' => $berita,
         ]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -52,7 +52,7 @@ class BeritaController extends Controller
 
         $data = $request->all();
         $data['slug'] = Str::slug($request->judul);
-        $data['user_id'] = Auth::id();
+        $data['user_name'] = auth()->user()->nama;
         $data['gambar'] = $request->file('gambar')->store('berita', 'public');
 
         Berita::create($data);
@@ -122,7 +122,7 @@ class BeritaController extends Controller
             'judul' => $request->judul,
             'deskripsi' => $request->deskripsi,
             'slug' => Str::slug($request->judul),
-            'user_id' => Auth::id(),
+            'user_name' => auth()->user()->nama,
         ]);
 
         return redirect()->route('berita.index')->with('success', 'Berhasil mengubah berita');

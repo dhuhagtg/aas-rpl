@@ -39,21 +39,40 @@
   /* Jarak antara garis dan teks */
 }
 
-/* --------------------------------------------------CARD-------------------------------------------------- */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.card {
-  width: calc(20% - 20px);
-  /* Lebar 20% dari container dengan jarak 20px antara setiap item */
-  margin-bottom: 20px;
-  /* Jarak bawah antara setiap item */
-}
-
-/* ---------------------------------------CONTAINER BERITA------------------------------------- */
+/* --------------------------------------------------DAFTAR BERITA-------------------------------------------------- */
 .container-berita {
-  margin-bottom: 100px;
+  display: flex;
+}
+
+.judul-berita-beranda {
+  text-align: center;
+  font-weight: bold;
+  font-size: xx-large;
+
+}
+
+.paginator-berita-beranda {
+  text-align: center;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  /* Untuk membuat ikon sejajar dengan teks */
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  /* Untuk membuat ikon sejajar dengan teks */
+}
+
+.date-text {
+  margin-left: 10px;
+  /* Spasi antara teks dan ikon */
+}
+
+/* -----------------------------------------DETAIL BERITA------------------------------------------------ */
+.container-detail {
+  overflow-x: hidden;
 }

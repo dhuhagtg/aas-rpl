@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import { MdDateRange } from 'react-icons/md';
 import { FaUser } from 'react-icons/fa';
-import './Berita.css'
-import Sidebar from './Sidebar';
+import '../Berita/Berita.css'
 
-const DaftarBerita = () => {
+const BeritaBeranda = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(3); // Ubah sesuai dengan jumlah item per halaman yang diinginkan
@@ -23,7 +22,16 @@ const DaftarBerita = () => {
     fetchData();
   }, []);
 
-  // MEMBATASI KATA
+  // Menghitung indeks awal dan akhir untuk item pada halaman saat ini
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Mengubah halaman
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  //membatasi kata dalam judul
+
   function truncateString(str, num) {
     if (str.length > num) {
       return str.slice(0, num) + '..';
@@ -55,16 +63,11 @@ const DaftarBerita = () => {
   console.log(formatDate(dateString)); // Output: 16 April 2024
 
 
-  // Menghitung indeks awal dan akhir untuk item pada halaman saat ini
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-  // Mengubah halaman
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
-      <div className="container-berita">
+      <h1 className="judul-berita-beranda">KABAR DESA MARGASANA</h1>
+      <div className="container-berita-beranda">
         {currentItems.map((item, id) => (
           <div key={id} className="flex gap-4" style={{ marginRight: 50, marginLeft: 50, marginTop: 50, marginBottom: 50 }}>
             <div className="card bg-base-100 shadow-xl" style={{ width: 300, height: 400 }}>
@@ -80,15 +83,14 @@ const DaftarBerita = () => {
                     <span className="date-text">{truncateString(item.user_name, 13)}</span>
                   </p>
                 </div>
-                <strong className="text-center text-2xl font-bold" ><a href={'berita-desa/' + item.slug}>{truncateString(item.judul, 50)}</a></strong>
+                <strong className="text-center text-2xl font-bold" ><a>{truncateString(item.judul, 50)}</a></strong>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* PAGINATION */}
-      <div className="paginator" style={{ marginBottom: 30 }}>
+      <div className="paginator-berita-beranda" style={{ marginBottom: 30 }}>
         <div className="join">
           <button className="join-item btn" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>«</button>
           <button className="join-item btn" >Page {currentPage}</button>
@@ -100,4 +102,4 @@ const DaftarBerita = () => {
   )
 }
 
-export default DaftarBerita
+export default BeritaBeranda

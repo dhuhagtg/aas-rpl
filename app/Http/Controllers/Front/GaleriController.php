@@ -16,6 +16,21 @@ class GaleriController extends Controller
     }
     public function list()
     {
-        return Galeri::all();
+        $galeri = Galeri::orderBy('created_at', 'desc')->get();
+        return $galeri;
+    }
+
+
+    public function detail($slug)
+    {
+        $galeri = Galeri::where('slug', $slug)->first();
+
+        // Jika galeri tidak ditemukan, berikan respons yang sesuai
+        if (!$galeri) {
+            return response()->json(['error' => 'Berita tidak ditemukan'], 404);
+        }
+        return Inertia::render('DetailGaleri', [
+            'galeri' => $galeri
+        ]);
     }
 }

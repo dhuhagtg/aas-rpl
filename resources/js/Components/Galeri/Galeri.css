@@ -52,3 +52,10 @@
   margin-bottom: 20px;
   /* Jarak bawah antara setiap item */
 }
+
+/* -------------------------------------------DETAIL GALERI--------------------------------------------------- */
+.container-detail {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}

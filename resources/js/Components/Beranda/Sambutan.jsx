@@ -1,17 +1,17 @@
-import kades from '../assets/kades.jpeg'
+import kades from '../assets/kepala-desa.jpg'
 import React from 'react';
 
 const Sambutan = () => {
   return (
     <section className="sambutan">
-      <div className='image'>
+      <div className="image">
         <img
           src={kades}
-          alt="A descriptive alt text for the image"
+          alt="Kepala Desa margasana"
         />
       </div>
-      <div className="description">
-        <h2>Selamat Datang!</h2>
+      <div className="description" style={{ marginLeft: 50, marginRight: 50 }}>
+        <h1 className="text-4xl font-bold text-center">SAMBUTAN KEPALA DESA</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
           odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.

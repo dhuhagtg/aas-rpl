@@ -26,7 +26,7 @@ const DaftarFoto = () => {
             <div className="card bg-base-100 shadow-xl" style={{ width: 300 }}>
               <figure><img src={"storage/" + item.gambar1} alt={item.judul} /></figure>
               <div className="card-body">
-                <strong className="text-center text-2xl font-bold"><a>{item.judul}</a></strong>
+                <strong className="text-center text-2xl font-bold"><a href={'galeri-desa/' + item.slug}>{item.judul}</a></strong>
               </div>
             </div>
           </div>
