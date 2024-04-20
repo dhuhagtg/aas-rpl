@@ -59,3 +59,15 @@
   flex-wrap: wrap;
   overflow-x: hidden;
 }
+
+.date {
+  display: flex;
+  align-items: center;
+  /* Untuk membuat ikon sejajar dengan teks */
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  /* Untuk membuat ikon sejajar dengan teks */
+}

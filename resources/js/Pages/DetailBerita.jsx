@@ -59,16 +59,15 @@ const DetailBerita = ({ berita }) => {
           </div>
 
           <h1 className="text-2xl ofnt-bold">{berita.judul}</h1>
-          <div className="flex justify-between mb-6">
-            <p className="text-sm date">
+          <div className="flex justify-between items-center mb-6 ">
+            <p className="text-sm flex items-center">
               <span className="icon"><MdDateRange /></span>
-              <span className="date-text">{formatDate(new Date(berita.created_at))}</span>
-            </p>
-            <p className="text-sm user">
+              <span className="date-text" style={{ marginRight: 20 }}>{formatDate(new Date(berita.created_at))}</span>
               <span className="icon"><FaUser /></span>
               <span className="date-text">{truncateString(berita.user_name, 13)}</span>
             </p>
           </div>
+
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img src={'/storage/' + berita.gambar} alt={berita.judul} style={{ width: 800 }} />
           </div>
