@@ -94,7 +94,7 @@ class PengaduanController extends Controller
         ]);
 
         if ($request->file('lampiran')) {
-            $validated['lampiran'] = $request->file('lampiran')->store('public/lampiran-laporan');
+            $validated['lampiran'] = $request->file('lampiran')->store('lampiran_laporan', 'public');
         }
 
         $validated['masyarakat_id'] = auth()->user()->id;

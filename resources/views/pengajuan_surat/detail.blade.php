@@ -132,7 +132,7 @@
 
                     <tr>
                         <td>
-                            <img src="{{ asset('storage/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP">
+                        <img src="{{ asset('storage/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP" style="max-width: 300px; max-height: 200px;">
                             <br> <br>
                         </td>
                     </tr>
@@ -1313,7 +1313,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="{{ asset('storage/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP">
+                        <img src="{{ asset('storage/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP" style="max-width: 300px; max-height: 200px;">
                             <br> <br>
                         </td>
                     </tr>
@@ -1448,7 +1448,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="{{ asset('storage/app/public/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP">
+                        <img src="{{ asset('storage/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP" style="max-width: 300px; max-height: 200px;">
                             <br> <br>
                         </td>
                     </tr>
@@ -1525,7 +1525,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="{{ asset('storage/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP">
+                        <img src="{{ asset('storage/' . $pengajuan_surat->foto_ktp) }}" alt="Foto KTP" style="max-width: 300px; max-height: 200px;">
+
                             <br> <br>
                         </td>
                     </tr>

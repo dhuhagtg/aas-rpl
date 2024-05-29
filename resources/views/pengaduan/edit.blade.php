@@ -19,7 +19,7 @@
             @else
                 <img src="" class="previewImage">
             @endif
-            <input type="hidden" name="oldLampiran" value="{{ $pengaduan->lampiran }}">
+            <input type="hidden" name="oldLampiran" value="{{ asset('storage/' . $pengaduan->lampiran) }}">
             <input class="file:mr-5 file:py-2 file:px-6 file:border-0 file:text-sm file:font-medium file:bg-dark file:text-white block w-full text-sm text-secondary bg-white rounded-lg border @error('lampiran') border-danger @else border-gray @enderror shadow-sm focus:border-gray focus:ring-gray cursor-pointer focus:outline-none" aria-describedby="lampiran_help" id="lampiran" type="file" name="lampiran" onchange="previewImage()">
             @error('lampiran')
                 <p class="mt-1 text-xs text-danger">{{ $message }}</p>

@@ -40,9 +40,9 @@
             <p class="text-dark">{{ $pengaduan->isi_laporan }}</p>
         </div>
         @if ($pengaduan->lampiran)
-            <img src="{{ url('storage/' . $pengaduan->lampiran) }}" alt="{{ $pengaduan->masyarakat->nama }}"
-                class="w-[600px]">
-        @endif
+    <img src="{{ asset('storage/'. $pengaduan->lampiran) }}" alt="{{ $pengaduan->masyarakat->nama }}" class="w-[600px]">
+@endif
+
     </div>
 
     @if (!$pengaduan->status == 0)

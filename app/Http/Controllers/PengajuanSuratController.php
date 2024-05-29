@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Barryvdh\DomPDF\Facade\Pdf;
+use Barryvdh\DomPDF\Facade\PDF;
 use App\Models\PengajuanSurat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,9 +14,9 @@ class PengajuanSuratController extends Controller
     {
 
         if (Auth::user()->level == 'masyarakat') {
-            $pengajuan_saya = PengajuanSurat::with('masyarakat')->whereMasyarakatId(Auth::user()->id)->get();
+            $pengajuan_saya = PengajuanSurat::with('masyarakat')->whereMasyarakatId(Auth::user()->id)->orderBy('created_at', 'desc')->get();
         } else {
-            $pengajuan_saya = PengajuanSurat::with('masyarakat')->get();
+            $pengajuan_saya = PengajuanSurat::with('masyarakat')->orderBy('created_at', 'desc')->get();
         }
 
         return view('pengajuan_surat.index', [
