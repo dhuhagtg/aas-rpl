@@ -7,11 +7,11 @@ const Sambutan = () => {
       <div className="image">
         <img
           src={kades}
-          alt="Kepala Desa margasana"
+          alt="Kepala samsat XYZ"
         />
       </div>
       <div className="description" style={{ marginLeft: 50, marginRight: 50 }}>
-        <h1 className="text-4xl font-bold text-center">SAMBUTAN KEPALA DESA</h1>
+        <h1 className="text-4xl font-bold text-center">SAMBUTAN KEPALA SAMSAT XYZ</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
           odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.

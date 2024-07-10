@@ -15,6 +15,7 @@
                 </a>
             </li>
             @can('masyarakat')
+            {{--
                 <li>
                     <a href="/pengaduan/create"
                         class="transform hover:translate-x-2 transition-transform ease-in duration-200">
@@ -106,8 +107,9 @@
                         <span class="text-sm font-medium">BPD</span>
                     </a>
                 </li>
+                --}}
             @endcanany
-
+            
             @can('admin')
                 <li>
                     <a href="/pengguna/masyarakat"

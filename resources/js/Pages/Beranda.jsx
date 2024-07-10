@@ -16,13 +16,11 @@ function Beranda() {
   return (
     <>
       <Helmet>
-        <title> Beranda - Desa Margasana</title>
+        <title> Beranda - Samsat XYZ</title>
       </Helmet>
       <Navbar />
       <CarouselBeranda />
-      <Sambutan />
-      <FiturDesa />
-      <BeritaBeranda />
+      <Sambutan />  
       <Footer />
 
     </>

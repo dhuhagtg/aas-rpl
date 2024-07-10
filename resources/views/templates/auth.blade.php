@@ -13,7 +13,7 @@
     @include('templates/alerts')
     <div class="flex flex-col items-center justify-center px-6 mx-auto min-h-screen py-6">
         <a href="#" class="flex justify-center mb-6 text-2xl font-semibold text-dark">
-            <img class="" src="{{ asset('img/logo.png') }}" width="160" alt="logo">
+            <img class="" width="160" alt="logo">
         </a>
         <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
             @yield('content')
